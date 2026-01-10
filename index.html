@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:title" content="혜지 ♥ 지우 결혼합니다">
+    <meta property="og:description" content="2026년 2월 6일 오후 4시, 하나님 안에서 만난 두 사람이 결혼합니다.">
+    <title>Hyeji & Jiwoo - Wedding Invitation</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Noto+Serif+KR:wght@300;400;500;600&family=Cinzel:wght@400;500;600&family=Italianno&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-bg: #FFFFFF;
+            --color-cream: #FAFBFD;
+            --color-blue: #6B85A3;
+            --color-blue-light: #A8BACE;
+            --color-blue-dark: #4A6380;
+            --color-text: #3D4451;
+            --color-text-light: #6B7280;
+            --font-display: 'Italianno', cursive;
+            --font-title: 'Cinzel', serif;
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-korean: 'Noto Serif KR', serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-korean);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* Language Toggle */
+        .lang-toggle {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            z-index: 1000;
+            display: flex;
+            border: 1px solid var(--color-blue-light);
+            border-radius: 20px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .lang-btn {
+            padding: 8px 16px;
+            border: none;
+            background: transparent;
+            color: var(--color-text);
+            font-size: 12px;
+            font-family: var(--font-serif);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--color-blue);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: var(--color-bg);
+            overflow: hidden;
+        }
+
+        .floral-frame {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .flower-corner {
+            position: absolute;
+            opacity: 0.85;
+        }
+
+        .flower-tl { top: 10px; left: 10px; width: 35%; max-width: 160px; }
+        .flower-tr { top: 10px; right: 10px; width: 30%; max-width: 140px; transform: scaleX(-1); }
+        .flower-bl { bottom: 10px; left: 10px; width: 30%; max-width: 140px; transform: scaleY(-1); }
+        .flower-br { bottom: 10px; right: 10px; width: 35%; max-width: 160px; transform: scale(-1, -1); }
+        .flower-side-left { top: 50%; left: 5px; transform: translateY(-50%) rotate(-10deg); width: 18%; max-width: 80px; }
+        .flower-side-right { top: 50%; right: 5px; transform: translateY(-50%) rotate(10deg) scaleX(-1); width: 18%; max-width: 80px; }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+        }
+
+        .hero-label {
+            font-family: var(--font-serif);
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--color-blue-light);
+            margin-bottom: 30px;
+        }
+
+        .couple-name {
+            font-family: var(--font-title);
+            font-size: 32px;
+            font-weight: 500;
+            color: var(--color-blue);
+            letter-spacing: 6px;
+            margin-bottom: 8px;
+        }
+
+        .and-text {
+            font-family: var(--font-display);
+            font-size: 48px;
+            color: var(--color-blue-light);
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .and-text::before, .and-text::after {
+            content: '';
+            width: 40px;
+            height: 1px;
+            background: var(--color-blue-light);
+        }
+
+        .couple-names-kr {
+            font-family: var(--font-korean);
+            font-size: 13px;
+            font-weight: 300;
+            color: var(--color-text-light);
+            letter-spacing: 8px;
+            margin: 25px 0;
+        }
+
+        .invite-text {
+            font-family: var(--font-serif);
+            font-size: 13px;
+            font-style: italic;
+            color: var(--color-text-light);
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        .wedding-date-main {
+            font-family: var(--font-title);
+            font-size: 18px;
+            color: var(--color-blue);
+            letter-spacing: 3px;
+            margin-bottom: 8px;
+        }
+
+        .wedding-info {
+            font-family: var(--font-serif);
+            font-size: 12px;
+            color: var(--color-text-light);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Message Section */
+        .message-section {
+            padding: 60px 30px;
+            text-align: center;
+            background: var(--color-cream);
+        }
+
+        .message-decor {
+            width: 100px;
+            margin: 0 auto 25px;
+            opacity: 0.6;
+        }
+
+        .message-text {
+            font-size: 14px;
+            line-height: 2.2;
+            color: var(--color-text);
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .parents-info {
+            margin-top: 30px;
+            font-size: 13px;
+            color: var(--color-text-light);
+            line-height: 2;
+        }
+
+        .parents-info strong { color: var(--color-blue); }
+
+        /* Gallery Section */
+        .gallery-section {
+            padding: 50px 20px;
+            background: var(--color-bg);
+            text-align: center;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 4px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .gallery-thumb {
+            aspect-ratio: 1;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .gallery-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-thumb:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox-img {
+            max-width: 90%;
+            max-height: 85vh;
+            object-fit: contain;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 32px;
+            cursor: pointer;
+            z-index: 2001;
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: background 0.3s ease;
+        }
+
+        .lightbox-nav:hover {
+            background: rgba(255,255,255,0.4);
+        }
+
+        .lightbox-prev { left: 15px; }
+        .lightbox-next { right: 15px; }
+
+        .lightbox-counter {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-family: var(--font-serif);
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
+
+        /* Verse Section */
+        .verse-section {
+            padding: 70px 30px;
+            text-align: center;
+            background: var(--color-bg);
+        }
+
+        .cross-icon {
+            font-size: 20px;
+            color: var(--color-blue-light);
+            margin-bottom: 25px;
+        }
+
+        .verse-en {
+            font-family: var(--font-serif);
+            font-size: 14px;
+            font-style: italic;
+            line-height: 2.2;
+            color: var(--color-blue);
+            max-width: 340px;
+            margin: 0 auto;
+        }
+
+        .verse-kr {
+            font-family: var(--font-korean);
+            font-size: 14px;
+            line-height: 2;
+            color: var(--color-text);
+            max-width: 300px;
+            margin: 25px auto 0;
+        }
+
+        .verse-ref {
+            font-family: var(--font-title);
+            font-size: 11px;
+            color: var(--color-blue-light);
+            margin-top: 20px;
+            letter-spacing: 2px;
+        }
+
+        /* Calendar */
+        .calendar-section {
+            padding: 50px 20px;
+            background: var(--color-cream);
+            text-align: center;
+        }
+
+        .section-title {
+            font-family: var(--font-title);
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--color-blue);
+            margin-bottom: 25px;
+        }
+
+        .calendar {
+            max-width: 300px;
+            margin: 0 auto;
+            background: white;
+            border: 1px solid var(--color-blue-light);
+            padding: 25px 20px;
+        }
+
+        .calendar-header {
+            font-family: var(--font-title);
+            font-size: 14px;
+            color: var(--color-blue);
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 6px;
+            font-size: 13px;
+        }
+
+        .calendar-day-name {
+            font-family: var(--font-serif);
+            color: var(--color-text-light);
+            font-size: 10px;
+            padding-bottom: 8px;
+        }
+
+        .calendar-day-name.sunday { color: var(--color-blue); }
+
+        .calendar-day {
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-text);
+            font-family: var(--font-serif);
+        }
+
+        .calendar-day.sunday { color: var(--color-blue); }
+
+        .calendar-day.wedding-day {
+            background: var(--color-blue);
+            color: white;
+            border-radius: 50%;
+        }
+
+        /* Countdown */
+        .countdown-section {
+            padding: 40px 20px;
+            background: var(--color-bg);
+            text-align: center;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .countdown-item { text-align: center; }
+
+        .countdown-number {
+            font-family: var(--font-title);
+            font-size: 28px;
+            font-weight: 400;
+            color: var(--color-blue);
+            display: block;
+            letter-spacing: 2px;
+        }
+
+        .countdown-label {
+            font-family: var(--font-serif);
+            font-size: 10px;
+            color: var(--color-text-light);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Location */
+        .location-section {
+            padding: 50px 20px;
+            background: var(--color-cream);
+            text-align: center;
+        }
+
+        .location-name {
+            font-family: var(--font-title);
+            font-size: 16px;
+            color: var(--color-text);
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+        }
+
+        .location-venue {
+            font-family: var(--font-serif);
+            font-size: 18px;
+            color: var(--color-blue);
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .location-address {
+            font-family: var(--font-serif);
+            font-size: 13px;
+            color: var(--color-text-light);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .map-container {
+            max-width: 340px;
+            margin: 0 auto 20px;
+            border: 1px solid var(--color-blue-light);
+            overflow: hidden;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+        }
+
+        .map-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            color: var(--color-blue);
+            border: 1px solid var(--color-blue);
+            padding: 12px 28px;
+            font-size: 12px;
+            font-family: var(--font-title);
+            letter-spacing: 2px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .map-btn:hover {
+            background: var(--color-blue);
+            color: white;
+        }
+
+        /* Event Info */
+        .event-section {
+            padding: 50px 20px;
+            background: var(--color-bg);
+            text-align: center;
+        }
+
+        .event-card {
+            max-width: 340px;
+            margin: 0 auto;
+            background: var(--color-cream);
+            border: 1px solid var(--color-blue-light);
+            padding: 30px 25px;
+        }
+
+        .event-icon {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .event-title {
+            font-family: var(--font-title);
+            font-size: 12px;
+            letter-spacing: 3px;
+            color: var(--color-blue);
+            margin-bottom: 20px;
+        }
+
+        .event-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--color-blue-light);
+        }
+
+        .event-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .event-item-title {
+            font-family: var(--font-serif);
+            font-size: 14px;
+            color: var(--color-blue);
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .event-item-desc {
+            font-size: 13px;
+            color: var(--color-text-light);
+            line-height: 1.8;
+        }
+
+        /* Account */
+        .account-section {
+            padding: 50px 20px;
+            background: var(--color-cream);
+            text-align: center;
+        }
+
+        .account-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            margin-bottom: 25px;
+        }
+
+        .account-tab {
+            padding: 10px 30px;
+            border: 1px solid var(--color-blue-light);
+            background: transparent;
+            color: var(--color-text);
+            font-family: var(--font-korean);
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .account-tab:first-child { border-right: none; }
+
+        .account-tab.active {
+            background: var(--color-blue);
+            color: white;
+            border-color: var(--color-blue);
+        }
+
+        .account-content { display: none; }
+        .account-content.active { display: block; }
+
+        .account-box {
+            background: white;
+            border: 1px solid var(--color-blue-light);
+            padding: 20px;
+            margin-bottom: 10px;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .account-label {
+            font-family: var(--font-serif);
+            font-size: 11px;
+            color: var(--color-blue);
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .account-name {
+            font-size: 14px;
+            color: var(--color-text);
+            margin-bottom: 3px;
+        }
+
+        .account-number {
+            font-family: var(--font-serif);
+            font-size: 13px;
+            color: var(--color-text-light);
+            margin-bottom: 12px;
+        }
+
+        .copy-btn {
+            background: transparent;
+            color: var(--color-blue);
+            border: 1px solid var(--color-blue);
+            padding: 8px 20px;
+            font-size: 11px;
+            font-family: var(--font-title);
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .copy-btn:hover {
+            background: var(--color-blue);
+            color: white;
+        }
+
+        /* RSVP */
+        .rsvp-section {
+            padding: 50px 20px;
+            background: var(--color-bg);
+            text-align: center;
+        }
+
+        .rsvp-form {
+            max-width: 340px;
+            margin: 0 auto;
+            background: var(--color-cream);
+            border: 1px solid var(--color-blue-light);
+            padding: 30px 25px;
+        }
+
+        .rsvp-subtitle {
+            font-family: var(--font-serif);
+            font-size: 13px;
+            color: var(--color-text-light);
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-label {
+            display: block;
+            font-family: var(--font-title);
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: var(--color-blue);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--color-blue-light);
+            background: white;
+            font-family: var(--font-korean);
+            font-size: 14px;
+            color: var(--color-text);
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--color-blue);
+        }
+
+        .form-input::placeholder {
+            color: var(--color-text-light);
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 15px;
+        }
+
+        .radio-option {
+            flex: 1;
+            position: relative;
+        }
+
+        .radio-option input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .radio-label {
+            display: block;
+            padding: 12px 15px;
+            border: 1px solid var(--color-blue-light);
+            background: white;
+            text-align: center;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .radio-option input:checked + .radio-label {
+            background: var(--color-blue);
+            color: white;
+            border-color: var(--color-blue);
+        }
+
+        .form-textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--color-blue-light);
+            background: white;
+            font-family: var(--font-korean);
+            font-size: 14px;
+            color: var(--color-text);
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--color-blue);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background: var(--color-blue);
+            color: white;
+            border: none;
+            font-family: var(--font-title);
+            font-size: 12px;
+            letter-spacing: 3px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background: var(--color-blue-dark);
+        }
+
+        .submit-btn:disabled {
+            background: var(--color-blue-light);
+            cursor: not-allowed;
+        }
+
+        .form-success {
+            display: none;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .form-success.show {
+            display: block;
+        }
+
+        .success-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .success-message {
+            font-size: 14px;
+            color: var(--color-text);
+            line-height: 1.8;
+        }
+
+        /* Share */
+        .share-section {
+            padding: 50px 20px;
+            text-align: center;
+            background: var(--color-cream);
+        }
+
+        .share-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 260px;
+            margin: 0 auto;
+        }
+
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 30px;
+            font-size: 13px;
+            font-family: var(--font-korean);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .share-btn.kakao {
+            background: #FEE500;
+            color: #3C1E1E;
+        }
+
+        .share-btn.link {
+            background: white;
+            color: var(--color-text);
+            border: 1px solid var(--color-blue-light);
+        }
+
+        .share-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 50px 20px;
+            text-align: center;
+            background: var(--color-blue);
+            color: white;
+        }
+
+        .footer-names {
+            font-family: var(--font-display);
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .footer-date {
+            font-family: var(--font-title);
+            font-size: 12px;
+            letter-spacing: 4px;
+            opacity: 0.8;
+        }
+
+        .footer-verse {
+            margin-top: 20px;
+            font-family: var(--font-serif);
+            font-size: 12px;
+            font-style: italic;
+            opacity: 0.7;
+            line-height: 1.8;
+        }
+
+        /* Toast */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: var(--color-blue);
+            color: white;
+            padding: 12px 25px;
+            font-size: 13px;
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Language visibility */
+        [data-lang-en] { display: none; }
+        [data-lang-ko] { display: block; }
+
+        body.lang-en [data-lang-en] { display: block; }
+        body.lang-en [data-lang-ko] { display: none; }
+
+        /* Inline language elements */
+        span[data-lang-en], strong[data-lang-en] { display: none; }
+        span[data-lang-ko], strong[data-lang-ko] { display: inline; }
+
+        body.lang-en span[data-lang-en], body.lang-en strong[data-lang-en] { display: inline; }
+        body.lang-en span[data-lang-ko], body.lang-en strong[data-lang-ko] { display: none; }
+    </style>
+</head>
+<body>
+    <!-- Language Toggle -->
+    <div class="lang-toggle">
+        <button class="lang-btn active" onclick="setLang('ko')">한국어</button>
+        <button class="lang-btn" onclick="setLang('en')">English</button>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="floral-frame">
+            <img src="flower1.png" alt="" class="flower-corner flower-tl">
+            <img src="flower2.png" alt="" class="flower-corner flower-tr">
+            <img src="flower3.png" alt="" class="flower-corner flower-bl">
+            <img src="flower1.png" alt="" class="flower-corner flower-br">
+            <img src="flower4.png" alt="" class="flower-corner flower-side-left">
+            <img src="flower4.png" alt="" class="flower-corner flower-side-right">
+        </div>
+        
+        <div class="hero-content">
+            <p class="hero-label" data-lang-ko>결혼합니다</p>
+            <p class="hero-label" data-lang-en>Together with their families</p>
+            <h1 class="couple-name">HYEJI</h1>
+            <p class="and-text">and</p>
+            <h1 class="couple-name">JIWOO</h1>
+            <p class="couple-names-kr" data-lang-ko>혜지 그리고 지우</p>
+            <p class="couple-names-kr" data-lang-en style="letter-spacing: 4px;">혜지 그리고 지우</p>
+            <p class="invite-text" data-lang-ko>하나님 안에서 한 가정을 이루려 합니다</p>
+            <p class="invite-text" data-lang-en>joyfully invite you to their wedding celebration</p>
+            <p class="wedding-date-main">FEBRUARY 6, 2026</p>
+            <p class="wedding-info" data-lang-ko>금요일 오후 4시</p>
+            <p class="wedding-info" data-lang-en>Friday, Four o'clock in the afternoon</p>
+        </div>
+    </section>
+
+    <!-- Message -->
+    <section class="message-section fade-in">
+        <img src="leaf1.png" alt="" class="message-decor">
+        <p class="message-text" data-lang-ko>
+            하나님 안에서 만난 두 사람이<br>
+            믿음과 사랑으로 하나의 가정을 이루려 합니다.<br>
+            기쁨의 자리에 함께해 주시길 바랍니다.
+        </p>
+        <p class="message-text" data-lang-en>
+            Two souls brought together by God's grace<br>
+            are joining in faith and love to become one family.<br>
+            We joyfully invite you to share in our celebration.
+        </p>
+        <div class="parents-info" data-lang-ko>
+            류명렬 · 라연수의 장남 <strong>지우</strong><br>
+            김영재 · 박연옥의 장녀 <strong>혜지</strong>
+        </div>
+        <div class="parents-info" data-lang-en>
+            <strong>Jiwoo</strong>, son of Myungryul Ryu & Yeonsu Ra<br>
+            <strong>Hyeji</strong>, daughter of Youngjae Kim & Yeonok Park
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery-section fade-in">
+        <p class="section-title">Gallery</p>
+        <div class="gallery-grid">
+            <div class="gallery-thumb" onclick="openLightbox(0)"><img src="01.jpg" alt="Wedding Photo 1"></div>
+            <div class="gallery-thumb" onclick="openLightbox(1)"><img src="02.jpg" alt="Wedding Photo 2"></div>
+            <div class="gallery-thumb" onclick="openLightbox(2)"><img src="03.jpg" alt="Wedding Photo 3"></div>
+            <div class="gallery-thumb" onclick="openLightbox(3)"><img src="04.jpg" alt="Wedding Photo 4"></div>
+            <div class="gallery-thumb" onclick="openLightbox(4)"><img src="05.jpg" alt="Wedding Photo 5"></div>
+            <div class="gallery-thumb" onclick="openLightbox(5)"><img src="06.jpg" alt="Wedding Photo 6"></div>
+            <div class="gallery-thumb" onclick="openLightbox(6)"><img src="07.jpg" alt="Wedding Photo 7"></div>
+            <div class="gallery-thumb" onclick="openLightbox(7)"><img src="08.jpg" alt="Wedding Photo 8"></div>
+            <div class="gallery-thumb" onclick="openLightbox(8)"><img src="09.jpg" alt="Wedding Photo 9"></div>
+            <div class="gallery-thumb" onclick="openLightbox(9)"><img src="10.jpg" alt="Wedding Photo 10"></div>
+            <div class="gallery-thumb" onclick="openLightbox(10)"><img src="11.jpg" alt="Wedding Photo 11"></div>
+            <div class="gallery-thumb" onclick="openLightbox(11)"><img src="12.jpg" alt="Wedding Photo 12"></div>
+            <div class="gallery-thumb" onclick="openLightbox(12)"><img src="13.jpg" alt="Wedding Photo 13"></div>
+            <div class="gallery-thumb" onclick="openLightbox(13)"><img src="14.jpg" alt="Wedding Photo 14"></div>
+            <div class="gallery-thumb" onclick="openLightbox(14)"><img src="15.jpg" alt="Wedding Photo 15"></div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <div class="lightbox-content">
+            <button class="lightbox-nav lightbox-prev" onclick="prevImage()">&#10094;</button>
+            <img src="" alt="" class="lightbox-img" id="lightboxImg">
+            <button class="lightbox-nav lightbox-next" onclick="nextImage()">&#10095;</button>
+        </div>
+        <div class="lightbox-counter"><span id="currentIndex">1</span> / 15</div>
+    </div>
+
+    <!-- Verse -->
+    <section class="verse-section fade-in">
+        <div class="cross-icon">✝</div>
+        <p class="verse-en">
+            Love is patient and kind;<br>
+            love does not envy or boast;<br>
+            it is not arrogant or rude.
+        </p>
+        <p class="verse-kr" data-lang-ko>
+            사랑은 오래 참고 사랑은 온유하며<br>
+            질투하지 아니하며 자랑하지 아니하며<br>
+            교만하지 아니하며
+        </p>
+        <p class="verse-ref">1 CORINTHIANS 13:4</p>
+    </section>
+
+    <!-- Calendar -->
+    <section class="calendar-section fade-in">
+        <p class="section-title">Calendar</p>
+        <div class="calendar">
+            <div class="calendar-header">FEBRUARY 2026</div>
+            <div class="calendar-grid">
+                <span class="calendar-day-name sunday">S</span>
+                <span class="calendar-day-name">M</span>
+                <span class="calendar-day-name">T</span>
+                <span class="calendar-day-name">W</span>
+                <span class="calendar-day-name">T</span>
+                <span class="calendar-day-name">F</span>
+                <span class="calendar-day-name">S</span>
+                
+                <span class="calendar-day sunday">1</span>
+                <span class="calendar-day">2</span>
+                <span class="calendar-day">3</span>
+                <span class="calendar-day">4</span>
+                <span class="calendar-day">5</span>
+                <span class="calendar-day wedding-day">6</span>
+                <span class="calendar-day">7</span>
+                
+                <span class="calendar-day sunday">8</span>
+                <span class="calendar-day">9</span>
+                <span class="calendar-day">10</span>
+                <span class="calendar-day">11</span>
+                <span class="calendar-day">12</span>
+                <span class="calendar-day">13</span>
+                <span class="calendar-day">14</span>
+                
+                <span class="calendar-day sunday">15</span>
+                <span class="calendar-day">16</span>
+                <span class="calendar-day">17</span>
+                <span class="calendar-day">18</span>
+                <span class="calendar-day">19</span>
+                <span class="calendar-day">20</span>
+                <span class="calendar-day">21</span>
+                
+                <span class="calendar-day sunday">22</span>
+                <span class="calendar-day">23</span>
+                <span class="calendar-day">24</span>
+                <span class="calendar-day">25</span>
+                <span class="calendar-day">26</span>
+                <span class="calendar-day">27</span>
+                <span class="calendar-day">28</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown -->
+    <section class="countdown-section fade-in">
+        <p class="section-title">D-Day</p>
+        <div class="countdown">
+            <div class="countdown-item">
+                <span class="countdown-number" id="days">000</span>
+                <span class="countdown-label">Days</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="hours">00</span>
+                <span class="countdown-label">Hours</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="minutes">00</span>
+                <span class="countdown-label">Min</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="seconds">00</span>
+                <span class="countdown-label">Sec</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location -->
+    <section class="location-section fade-in">
+        <p class="section-title">Location</p>
+        <h3 class="location-name" data-lang-ko>오시는 길</h3>
+        <h3 class="location-name" data-lang-en>VENUE</h3>
+        <p class="location-venue">The Officers Mess</p>
+        <p class="location-address">
+            Fort Takapuna<br>
+            1 Saint Leonards Road,<br>
+            Hauraki, Auckland
+        </p>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3193.8!2d174.7883!3d-36.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2fdec77fc0994621!2sThe%20Officers%20Mess%2C%20Fort%20Takapuna!5e0!3m2!1sen!2snz!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <a href="https://www.google.com/maps/place/The+Officers+Mess,+Fort+Takapuna/data=!4m2!3m1!1s0x0:0x2fdec77fc0994621" target="_blank" class="map-btn">
+            <span data-lang-ko>지도 앱에서 열기</span>
+            <span data-lang-en>OPEN IN MAPS</span>
+        </a>
+    </section>
+
+    <!-- Event Info -->
+    <section class="event-section fade-in">
+        <p class="section-title" data-lang-ko>안내사항</p>
+        <p class="section-title" data-lang-en>Event Information</p>
+        <div class="event-card">
+            <div class="event-icon">💒</div>
+            <h3 class="event-title" data-lang-ko>결혼식 & 피로연 안내</h3>
+            <h3 class="event-title" data-lang-en>CEREMONY & RECEPTION</h3>
+            
+            <div class="event-item">
+                <p class="event-item-title" data-lang-ko>🎥 축하 영상 촬영</p>
+                <p class="event-item-title" data-lang-en>🎥 Video Messages</p>
+                <p class="event-item-desc" data-lang-ko>
+                    저녁 식사 중 촬영 담당자가 테이블을 돌며<br>
+                    축하 메시지 영상을 촬영할 예정입니다.
+                </p>
+                <p class="event-item-desc" data-lang-en>
+                    During dinner, our videographer will visit tables<br>
+                    to capture your congratulatory messages.
+                </p>
+            </div>
+
+            <div class="event-item">
+                <p class="event-item-title" data-lang-ko>🎉 피로연 프로그램</p>
+                <p class="event-item-title" data-lang-en>🎉 Reception Program</p>
+                <p class="event-item-desc" data-lang-ko>
+                    스피치, 찬양, 경품추첨 등<br>
+                    다양한 프로그램이 준비되어 있습니다.
+                </p>
+                <p class="event-item-desc" data-lang-en>
+                    Speeches, worship songs, and prize draws<br>
+                    are planned throughout the evening.
+                </p>
+            </div>
+
+            <div class="event-item">
+                <p class="event-item-title" data-lang-ko>💃 댄싱 플로어</p>
+                <p class="event-item-title" data-lang-en>💃 Dancing Floor</p>
+                <p class="event-item-desc" data-lang-ko>
+                    댄싱 플로어는 늦은 밤까지 열려 있습니다.<br>
+                    오래오래 천천히 즐겨주세요!
+                </p>
+                <p class="event-item-desc" data-lang-en>
+                    The dance floor will be open late into the night.<br>
+                    Stay, dance, and enjoy the celebration!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="rsvp-section fade-in">
+        <p class="section-title">RSVP</p>
+        <div class="rsvp-form" id="rsvpFormContainer">
+            <p class="rsvp-subtitle" data-lang-ko>참석 여부를 알려주세요</p>
+            <p class="rsvp-subtitle" data-lang-en>Please let us know if you can attend</p>
+            
+            <form id="rsvpForm">
+                <div class="form-group">
+                    <label class="form-label" data-lang-ko>성함 / Name</label>
+                    <label class="form-label" data-lang-en>Your Name</label>
+                    <input type="text" class="form-input" name="name" required placeholder="홍길동 / John Doe">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" data-lang-ko>동행자 성함 (선택사항)</label>
+                    <label class="form-label" data-lang-en>Companion Names (Optional)</label>
+                    <input type="text" class="form-input" name="companion1" placeholder="동행자 1 / Companion 1" style="margin-bottom: 8px;">
+                    <input type="text" class="form-input" name="companion2" placeholder="동행자 2 / Companion 2" style="margin-bottom: 8px;">
+                    <input type="text" class="form-input" name="companion3" placeholder="동행자 3 / Companion 3" style="margin-bottom: 8px;">
+                    <input type="text" class="form-input" name="companion4" placeholder="동행자 4 / Companion 4">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" data-lang-ko>참석 여부</label>
+                    <label class="form-label" data-lang-en>Attendance</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" name="attending" id="attendYes" value="yes" required>
+                            <label class="radio-label" for="attendYes">
+                                <span data-lang-ko>참석</span>
+                                <span data-lang-en>Attending</span>
+                            </label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="attending" id="attendNo" value="no">
+                            <label class="radio-label" for="attendNo">
+                                <span data-lang-ko>불참</span>
+                                <span data-lang-en>Unable</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" data-lang-ko>음식 알러지 / 식이 제한</label>
+                    <label class="form-label" data-lang-en>Food Allergies / Dietary Restrictions</label>
+                    <textarea class="form-textarea" name="allergies" placeholder="없음 / None"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span data-lang-ko>제출하기</span>
+                    <span data-lang-en>SUBMIT</span>
+                </button>
+            </form>
+
+            <div class="form-success" id="formSuccess">
+                <div class="success-icon">💌</div>
+                <p class="success-message" data-lang-ko>
+                    감사합니다!<br>
+                    참석 여부가 전달되었습니다.<br>
+                    결혼식에서 뵙겠습니다 💙
+                </p>
+                <p class="success-message" data-lang-en>
+                    Thank you!<br>
+                    Your response has been recorded.<br>
+                    We look forward to seeing you! 💙
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Share -->
+    <section class="share-section fade-in">
+        <p class="section-title">Share</p>
+        <div class="share-buttons">
+            <button class="share-btn kakao" onclick="shareKakao()">
+                💬 <span data-lang-ko>카카오톡으로 공유</span><span data-lang-en>Share via KakaoTalk</span>
+            </button>
+            <button class="share-btn link" onclick="copyLink()">
+                🔗 <span data-lang-ko>링크 복사하기</span><span data-lang-en>Copy Link</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer-names">Hyeji & Jiwoo</p>
+        <p class="footer-date">FEBRUARY 6, 2026</p>
+        <p class="footer-verse">
+            Love bears all things, believes all things,<br>
+            hopes all things, endures all things.
+        </p>
+    </footer>
+
+    <div class="toast" id="toast">복사되었습니다</div>
+
+    <script>
+        // Gallery Lightbox
+        const galleryImages = [
+            '01.jpg', '02.jpg', '03.jpg', '04.jpg', '05.jpg',
+            '06.jpg', '07.jpg', '08.jpg', '09.jpg', '10.jpg',
+            '11.jpg', '12.jpg', '13.jpg', '14.jpg', '15.jpg'
+        ];
+        let currentImageIndex = 0;
+
+        function openLightbox(index) {
+            currentImageIndex = index;
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightboxImg');
+            img.src = galleryImages[index];
+            document.getElementById('currentIndex').textContent = index + 1;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+            document.getElementById('lightboxImg').src = galleryImages[currentImageIndex];
+            document.getElementById('currentIndex').textContent = currentImageIndex + 1;
+        }
+
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+            document.getElementById('lightboxImg').src = galleryImages[currentImageIndex];
+            document.getElementById('currentIndex').textContent = currentImageIndex + 1;
+        }
+
+        // Swipe support for lightbox
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.getElementById('lightbox').addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, false);
+
+        document.getElementById('lightbox').addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            if (touchEndX < touchStartX - 50) nextImage();
+            if (touchEndX > touchStartX + 50) prevImage();
+        }, false);
+
+        // Close lightbox on background click
+        document.getElementById('lightbox').addEventListener('click', e => {
+            if (e.target.id === 'lightbox' || e.target.classList.contains('lightbox-content')) {
+                closeLightbox();
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', e => {
+            if (document.getElementById('lightbox').classList.contains('active')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowRight') nextImage();
+                if (e.key === 'ArrowLeft') prevImage();
+            }
+        });
+
+        // Language Toggle
+        function setLang(lang) {
+            document.body.classList.remove('lang-en', 'lang-ko');
+            if (lang === 'en') {
+                document.body.classList.add('lang-en');
+            }
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            localStorage.setItem('lang', lang);
+        }
+
+        // Load saved language
+        const savedLang = localStorage.getItem('lang');
+        if (savedLang === 'en') {
+            document.body.classList.add('lang-en');
+            document.querySelectorAll('.lang-btn')[1].classList.add('active');
+            document.querySelectorAll('.lang-btn')[0].classList.remove('active');
+        }
+
+        // Countdown
+        function updateCountdown() {
+            const wedding = new Date('2026-02-06T16:00:00+13:00').getTime();
+            const now = new Date().getTime();
+            const diff = wedding - now;
+            if (diff > 0) {
+                document.getElementById('days').textContent = String(Math.floor(diff / (1000 * 60 * 60 * 24))).padStart(3, '0');
+                document.getElementById('hours').textContent = String(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+                document.getElementById('seconds').textContent = String(Math.floor((diff % (1000 * 60)) / 1000)).padStart(2, '0');
+            }
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Account Tabs
+        function showAccount(type) {
+            document.querySelectorAll('.account-tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.account-content').forEach(content => content.classList.remove('active'));
+            event.target.classList.add('active');
+            document.getElementById(type + '-account').classList.add('active');
+        }
+
+        // Copy
+        function copyAccount(account) {
+            navigator.clipboard.writeText(account).then(() => showToast('계좌번호가 복사되었습니다'));
+        }
+
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => showToast('링크가 복사되었습니다'));
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            toast.textContent = msg;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2000);
+        }
+
+        function shareKakao() {
+            if (navigator.share) {
+                navigator.share({ title: '혜지 ♥ 지우 결혼합니다', text: '2026년 2월 6일 금요일 오후 4시\nThe Officers Mess, Auckland', url: window.location.href });
+            } else { copyLink(); }
+        }
+
+        // RSVP Form
+        // Google Apps Script URL
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzd5jOB8rk48gAsJZj4si_50UiF7_NMCK9U9snQlaB2qsXM9T9JhTifFChCvIervtja/exec';
+
+        document.getElementById('rsvpForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span data-lang-ko>전송 중...</span><span data-lang-en>Sending...</span>';
+
+            const companions = [
+                this.companion1.value,
+                this.companion2.value,
+                this.companion3.value,
+                this.companion4.value
+            ].filter(name => name.trim() !== '');
+
+            const formData = {
+                name: this.name.value,
+                attending: this.attending.value,
+                companions: companions.join(', ') || '없음',
+                totalGuests: this.attending.value === 'yes' ? 1 + companions.length : 0,
+                allergies: this.allergies.value || '없음',
+                timestamp: new Date().toISOString()
+            };
+
+            try {
+                if (GOOGLE_SCRIPT_URL !== 'YOUR_GOOGLE_SCRIPT_URL_HERE') {
+                    await fetch(GOOGLE_SCRIPT_URL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(formData)
+                    });
+                }
+                
+                // Show success
+                document.getElementById('rsvpForm').style.display = 'none';
+                document.getElementById('formSuccess').classList.add('show');
+            } catch (error) {
+                console.error('Error:', error);
+                showToast('오류가 발생했습니다. 다시 시도해주세요.');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<span data-lang-ko>제출하기</span><span data-lang-en>SUBMIT</span>';
+            }
+        });
+
+        // Scroll Animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
